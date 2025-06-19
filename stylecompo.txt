@@ -1,0 +1,29 @@
+//Installing styled Components
+
+npm i styled-components
+
+saving to variable that will be a component :
+which property need to be styled such as h1
+write properties inside template literals
+
+const H1 = styled.h1 `
+    font-size:30px;
+    font-weight:600;
+`;
+
+This is react so we can use that variable as our tag
+<H1>whatever we write here will be styled with above properties.</H1>
+
+//Using styled components
+const Button = styled.button`
+  font-size: 1.4rem;
+  padding: 1.2rem 1.6rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 7px;
+  background-color: purple;
+  color: white;
+`;
+//Applying the styled components
+
+      <Button>Click me</Button>
