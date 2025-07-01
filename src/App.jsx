@@ -11,14 +11,17 @@ const StyledApp = styled.div`
 function App() {
   return (
     <>
+      {/* when inspect it will show the same h1 tag in all but our type is different 
+    so to fix that styled components provides us "as" prop. as prop will be the element 
+    that will be rendered in the element  */}
       <GlobalStyles />
       <StyledApp>
-        <Heading type="h1">The Wild Oasis</Heading>
-        <Heading type="h2">Check in and out</Heading>
+        <Heading as="h1">The Wild Oasis</Heading>
+        <Heading as="h2">Check in and out</Heading>
 
         <Button onClick={() => alert("Check In")}>Check In</Button>
         <Button onClick={() => alert("Check out")}>Check out</Button>
-        <Heading type="h3">Form</Heading>
+        <Heading as="h3">Form</Heading>
 
         <Input type="number" placeholder="Number of Guests" />
         <Input type="number" placeholder="Number of Guests" />
