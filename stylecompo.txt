@@ -27,3 +27,12 @@ const Button = styled.button`
 //Applying the styled components
 
       <Button>Click me</Button>
+
+
+//Installing libraries
+
+styled Components 
+npm i styled-components
+
+react router - v.6
+npm i react-router-dom@6
