@@ -31,8 +31,19 @@ const Button = styled.button`
 
 //Installing libraries
 
-styled Components 
+//styled Components 
 npm i styled-components
 
-react router - v.6
+//react router - v.6
 npm i react-router-dom@6
+
+//react icons
+npm i react-icons
+
+//using the react icons from heroicons 2
+import { HiHomeModern } from "react-icons/hi2";
+
+<StyledNavLink to="/dashboard">
+            <HiHomeModern />  <- using the icons by components
+            Home
+          </StyledNavLink>
