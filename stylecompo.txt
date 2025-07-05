@@ -47,3 +47,29 @@ import { HiHomeModern } from "react-icons/hi2";
             <HiHomeModern />  <- using the icons by components
             Home
           </StyledNavLink>
+
+
+//Supabase Theory
+Helps in creating a backend easily
+automatically creates a database and API so we can easily request and recieve data from server
+No back end development needed. Perfect to get up and running qucikly.
+Easy User Auth and File storage.
+
+//Creating a new Database
+
+create account
+
+create project 
+
+explore table and create table 
+
+//Creating Tables
+
+cabins column data
+guests row data
+settings row data
+
+
+bookings table is created and connected using the ID of cabin and guests.
+
+bookings row insert data
