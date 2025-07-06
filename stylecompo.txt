@@ -73,3 +73,23 @@ settings row data
 bookings table is created and connected using the ID of cabin and guests.
 
 bookings row insert data
+
+//Connect supabase with local computer
+
+So supabase creates API for all our tables automatically.
+It provides us javascript for each data as well as RESTFULAPIs for each data or 
+for all rows as a whole we can choose.
+For APIs we can choose bash option at the top right.
+There is a option of hide key we have to select anon and make it public
+
+
+The API key will return a null value because of RLS (Row level Security) which means it will
+prevent anything when someone tries to perform any operation.
+
+Giving permission :
+Auth -> policies -> create new policy -> select all public -> apply policy -> done
+
+
+conneccting API with react
+//installing supabase library
+npm i --save @supabase/supabase-js
