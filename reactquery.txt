@@ -1,0 +1,45 @@
+//React Query
+Managing remote state
+
+powerful for managing state that is remote such as in a server like supabase
+
+
+What is React Query?
+A data-fetching and remote state management library for React applications that simplifies 
+working with server-side data. It helps fetch, cache, sync, and update data efficiently.
+
+-> Built-in Caching:Automatically stores fetched data for reuse, avoiding redundant API calls.
+
+-> Automatic Background Refetching:Keeps data fresh by refetching on tab focus, network reconnection, or intervals.
+
+-> Prefetching Support:Allows fetching data before it's needed (e.g., next page in pagination).
+
+-> Built-in Loading & Error States:Simplifies UI logic by handling loading and error conditions out of the box.
+
+-> Fast UI Updates:Provides near-instant responses by serving data from cache.
+
+-> Data Mutations:Supports easy and flexible creation, update, and deletion of remote data.
+
+-> Offline Support:Allows users to access cached data even when offline.
+
+-> Sync Across Components:Keeps multiple components in sync with shared remote state.
+
+-> DevTools Support:Comes with React Query Devtools for debugging queries visually.
+
+//Installing react-Query
+
+using version 4
+
+npm i @tanstack/react-query@4 
+
+
+The QueryClient is a central component in React Query
+ that manages caching, fetching, and updating data
+
+staleTime : time until the data is refreshed again, it is a time until the data is 
+fresh.
+
+Provider is provided at the top and wrapped 
+<QueryClientProvider client = {queryClient}> 
+
+</QueryClientProvider>
