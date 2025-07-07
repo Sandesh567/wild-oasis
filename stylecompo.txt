@@ -93,3 +93,11 @@ Auth -> policies -> create new policy -> select all public -> apply policy -> do
 conneccting API with react
 //installing supabase library
 npm i --save @supabase/supabase-js
+
+create supabase.js 
+copy the code from the web and copy our key and paste
+applying to the each pages and fetching data
+
+//Setting up storage bucket
+storage -> new bucket -> name the bucket such as avatars, cabins-images 
+and drag & drop the images.
