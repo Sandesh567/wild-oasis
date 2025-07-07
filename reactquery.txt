@@ -43,3 +43,7 @@ Provider is provided at the top and wrapped
 <QueryClientProvider client = {queryClient}> 
 
 </QueryClientProvider>
+
+//React query devtools
+using version 4 for no ERROR
+ npm i @tanstack/react-query-devtools@4
