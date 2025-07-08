@@ -17,7 +17,8 @@ import AppLayout from "./ui/AppLayout";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 60 * 1000, //time untile the data is refreshed again.
+      // staleTime: 60 * 1000, //time untile the data is refreshed again.
+      staleTime: 0, //now when we update dat at supabase it will immediately refresh the broswer data;
     },
   },
 });
