@@ -101,3 +101,6 @@ applying to the each pages and fetching data
 //Setting up storage bucket
 storage -> new bucket -> name the bucket such as avatars, cabins-images 
 and drag & drop the images.
+
+//Installing date function for manipulating the date library
+npm i date-fns
