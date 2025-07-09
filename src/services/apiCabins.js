@@ -19,11 +19,11 @@ export async function getCabins() {
 
 
 export async function deleteCabin(id) {
+    //getting from supabse client 
+    //deleting from cabins table
+    //providing id 
 
-    const { data, error } = await supabase //getting from supabse client 
-        .from('cabins') //deleting from cabins table
-        .delete()
-        .eq("id", id)//providing id 
+    const { data, error } = await supabase.from("cabins").delete().eq("id", id)
 
     if (error) {
         console.log(error);
