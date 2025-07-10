@@ -104,3 +104,6 @@ and drag & drop the images.
 
 //Installing date function for manipulating the date library
 npm i date-fns
+
+//Installing notification icon styled
+ npm i react-hot-toast
