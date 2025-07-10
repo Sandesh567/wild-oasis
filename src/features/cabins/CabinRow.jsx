@@ -42,8 +42,14 @@ const Discount = styled.div`
 `;
 
 function CabinRow({ cabin }) {
-  const { cabinId, name, maxCapacity, regularPrice, discount, image } = cabin;
-
+  const {
+    id: cabinId,
+    name,
+    maxCapacity,
+    regularPrice,
+    discount,
+    image,
+  } = cabin;
   const queryClient = useQueryClient();
 
   //using useMutation and mutationFn to delete keys.
@@ -62,7 +68,7 @@ function CabinRow({ cabin }) {
     <TableRow role="row">
       <Img src={image} />
       <Cabin>{name}</Cabin>
-      <div>Fits up to {maxCapacity}guests</div>
+      <div>Fits up to {maxCapacity} guests</div>
       <Price>{formatCurrency(regularPrice)}</Price>
       <Discount>{formatCurrency(discount)}</Discount>
       <button onClick={() => mutate(cabinId)} disabled={isDeleting}>
