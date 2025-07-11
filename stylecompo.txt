@@ -107,3 +107,7 @@ npm i date-fns
 
 //Installing notification icon styled
  npm i react-hot-toast
+
+ //Installing react form
+ npm i react-hook-form@7
+ 
