@@ -110,4 +110,6 @@ npm i date-fns
 
  //Installing react form
  npm i react-hook-form@7
+ 1 step is to register the input fields by {...register("name")} this.
+ 2 step is to pass handleSubmit that we got from useForm and add our own function.
  
