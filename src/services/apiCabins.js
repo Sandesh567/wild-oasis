@@ -18,6 +18,25 @@ export async function getCabins() {
 }
 
 
+
+export async function createCabin(newCabin) {
+
+    const { data, error } = await supabase
+        .from('cabins')
+        .insert([newCabin])
+        .select()
+
+    if (error) {
+        console.log(error);
+        throw new Error("cabins cannot be created")
+
+    }
+
+    return data;
+
+}
+
+
 export async function deleteCabin(id) {
     //getting from supabse client 
     //deleting from cabins table
