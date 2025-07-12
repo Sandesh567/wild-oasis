@@ -42,11 +42,15 @@ export async function deleteCabin(id) {
     //deleting from cabins table
     //providing id 
 
-    const { data, error } = await supabase.from("cabins").delete().eq("id", id)
+
+    const { data, error } = await supabase
+        .from('cabins')
+        .delete()
+        .eq('id', id)
 
     if (error) {
         console.log(error);
-        throw new Error("cabins cannot be deleted")
+        throw new Error("Cabins cannot be deleted")
 
     }
 
