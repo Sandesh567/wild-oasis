@@ -51,7 +51,6 @@ function CreateCabinForm() {
 
   //getting errors to display on the page.
   const { errors } = formState();
-  console.log(errors);
 
   const queryClient = useQueryClient();
 
@@ -70,24 +69,22 @@ function CreateCabinForm() {
   }
 
   function onError(errors) {
-    console.log(errors);
+    // console.log(errors);
   }
 
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
-      <FormRow>
-        <Label htmlFor="name">Cabin name</Label>
+      <FormRow label="Cabin Name" error={errors?.name?.message}>
         <Input
           type="text"
           id="name"
-          {...register("name", { required: "This field is required" })}
+          {...register("name", {
+            required: "This field is required",
+          })}
         />
-        {/* displaying the error message */}
-        {errors?.name?.message && <Error>{errors.name.message}</Error>}
       </FormRow>
 
-      <FormRow>
-        <Label htmlFor="maxCapacity">Maximum capacity</Label>
+      <FormRow label="Maximum Capacity" error={errors?.maxCapacity?.message}>
         <Input
           type="number"
           id="maxCapacity"
@@ -101,8 +98,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
-        <Label htmlFor="regularPrice">Regular price</Label>
+      <FormRow label="Regular Price" error={errors?.regularPrice?.message}>
         <Input
           type="number"
           id="regularPrice"
@@ -116,8 +112,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
-        <Label htmlFor="discount">Discount</Label>
+      <FormRow label="Discount" error={errors?.discount?.message}>
         <Input
           type="number"
           id="discount"
@@ -131,8 +126,10 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
-        <Label htmlFor="description">Description for website</Label>
+      <FormRow
+        label="Description For Website"
+        error={errors?.description?.message}
+      >
         <Textarea
           type="number"
           id="description"
@@ -141,8 +138,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
-        <Label htmlFor="image">Cabin photo</Label>
+      <FormRow label="Cabin Photo">
         <FileInput id="image" accept="image/*" />
       </FormRow>
 
