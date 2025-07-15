@@ -12,7 +12,12 @@ import Textarea from "../../ui/Textarea";
 import FormRow from "../../ui/FormRow";
 
 function CreateCabinForm({ cabinToEdit }) {
-  const { register, handleSubmit, reset, getValues, formState } = useForm();
+  const { id: editId, ...editValues } = cabinToEdit;
+  const isEditSession = Boolean(editId);
+
+  const { register, handleSubmit, reset, getValues, formState } = useForm({
+    defaultValues: isEditSession ? editValues : {},
+  });
 
   //getting errors to display on the page.
   const { errors } = formState;
@@ -113,7 +118,9 @@ function CreateCabinForm({ cabinToEdit }) {
           id="image"
           accept="image/*"
           type="file"
-          {...register("image", { required: "This field is required" })}
+          {...register("image", {
+            required: isEditSession ? false : "This field is required",
+          })}
         />
       </FormRow>
 
@@ -122,7 +129,9 @@ function CreateCabinForm({ cabinToEdit }) {
         <Button variation="secondary" type="reset">
           Cancel
         </Button>
-        <Button disabled={isCreating}>Add cabin</Button>
+        <Button disabled={isCreating}>
+          {isEditSession ? "Edit Cabin" : "Create New Cabin"}
+        </Button>
       </FormRow>
     </Form>
   );
