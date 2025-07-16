@@ -20,8 +20,14 @@ export async function getCabins() {
 
 
 export async function createEditCabin(newCabin, id) {
+
+    const hasImagePath = newCabin.image?.startsWith?.(supabase);
+
+
     const imageName = `${Math.random()}-${newCabin.image.name}`.replaceAll("/", "");
-    const imagePath = `${supabaseUrl}/storage/v1/object/public/cabins-images/${imageName}`; // Removed double slash
+    const imagePath = hasImagePath ?
+        newCabin.image :
+        `${supabaseUrl}/storage/v1/object/public/cabins-images/${imageName}`;
 
     // 1. Create Edit / Cabin (with imagePath as placeholder for image URL)
     let query = supabase.from("cabins");
