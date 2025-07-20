@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { formatCurrency } from "../../utils/helpers";
 
 import CreateCabinForm from "./CreateCabinForm";
 import { useDeleteCabin } from "./useDeleteCabin";
+import { formatCurrency } from "../../utils/helpers";
 import { HiPencil, HiSquare2Stack, HiTrash } from "react-icons/hi2";
 import { useCreateCabin } from "./useCreateCabin";
 
@@ -52,7 +52,7 @@ function CabinRow({ cabin }) {
   const { isCreating, createCabin } = useCreateCabin();
 
   const {
-    id: Id,
+    id: cabinId,
     name,
     maxCapacity,
     regularPrice,
@@ -84,15 +84,14 @@ function CabinRow({ cabin }) {
         ) : (
           <span>&mdash;</span>
         )}
-
         <div>
-          <button disabled={isCreating}>
+          <button disabled={isCreating} onClick={handleDuplicate}>
             <HiSquare2Stack />
           </button>
           <button onClick={() => setShowForm((show) => !show)}>
             <HiPencil />
           </button>
-          <button onClick={() => deleteCabin(Id)} disabled={isDeleting}>
+          <button onClick={() => deleteCabin(cabinId)} disabled={isDeleting}>
             <HiTrash />
           </button>
         </div>
