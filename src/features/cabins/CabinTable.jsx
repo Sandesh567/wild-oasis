@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import Spinner from "../../ui/Spinner";
 import CabinRow from "./CabinRow";
 import { useCabins } from "./useCabins";
@@ -33,7 +34,6 @@ function CabinTable() {
   if (isLoading) return <Spinner />;
 
   return (
-    // Providing role to specify it should be table and row.
     <Table role="table">
       <TableHeader role="row">
         <div></div>
@@ -41,7 +41,6 @@ function CabinTable() {
         <div>Capacity</div>
         <div>Price</div>
         <div>Discount</div>
-
         <div></div>
       </TableHeader>
       {cabins.map((cabin) => (
