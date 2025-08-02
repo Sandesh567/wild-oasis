@@ -18,8 +18,6 @@ const Row = styled.div`
     `}
 `;
 
-// Setting react default props
-
 Row.defaultProps = {
   type: "vertical",
 };
