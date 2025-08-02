@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { HiHomeModern, HiOutlineUsers } from "react-icons/hi2";
-import { HiCalendarDays } from "react-icons/hi2";
-import { HiHome } from "react-icons/hi2";
-import { HiCog6Tooth } from "react-icons/hi2";
+import {
+  HiOutlineCalendarDays,
+  HiOutlineCog6Tooth,
+  HiOutlineHome,
+  HiOutlineHomeModern,
+  HiOutlineUsers,
+} from "react-icons/hi2";
 
 const NavList = styled.ul`
   display: flex;
@@ -11,7 +14,6 @@ const NavList = styled.ul`
   gap: 0.8rem;
 `;
 
-// Way of styling the 3rd party link or tag using the styledComponenets
 const StyledNavLink = styled(NavLink)`
   &:link,
   &:visited {
@@ -57,32 +59,32 @@ function MainNav() {
       <NavList>
         <li>
           <StyledNavLink to="/dashboard">
-            <HiHome />
-            Home
+            <HiOutlineHome />
+            <span>Home</span>
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/bookings">
-            <HiCalendarDays />
-            Bookings
+            <HiOutlineCalendarDays />
+            <span>Bookings</span>
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/cabins">
-            <HiHomeModern />
-            Cabins
+            <HiOutlineHomeModern />
+            <span>Cabins</span>
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/users">
             <HiOutlineUsers />
-            Users
+            <span>Users</span>
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/settings">
-            <HiCog6Tooth />
-            Settings
+            <HiOutlineCog6Tooth />
+            <span>Settings</span>
           </StyledNavLink>
         </li>
       </NavList>

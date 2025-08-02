@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Header from "./Header";
 import styled from "styled-components";
 
 const StyledAppLayout = styled.div`
@@ -29,9 +29,7 @@ function AppLayout() {
     <StyledAppLayout>
       <Header />
       <Sidebar />
-
       <Main>
-        {/* Placing outlet children inside main so each page has the same styles */}
         <Container>
           <Outlet />
         </Container>

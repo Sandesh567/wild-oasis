@@ -1,18 +1,21 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const ButtonText = styled.button`
-  color: var(--color-brand-600);
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.3s;
+const ButtonIcon = styled.button`
   background: none;
   border: none;
+  padding: 0.6rem;
   border-radius: var(--border-radius-sm);
+  transition: all 0.2s;
 
-  &:hover,
-  &:active {
-    color: var(--color-brand-700);
+  &:hover {
+    background-color: var(--color-grey-100);
+  }
+
+  & svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    color: var(--color-brand-600);
   }
 `;
 
-export default ButtonText;
+export default ButtonIcon;

@@ -41,7 +41,6 @@ function FormRow({ label, error, children }) {
     <StyledFormRow>
       {label && <Label htmlFor={children.props.id}>{label}</Label>}
       {children}
-      {/* displaying the error message */}
       {error && <Error>{error}</Error>}
     </StyledFormRow>
   );
